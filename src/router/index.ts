@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AccountsPage from '@/pages/AccountsPage.vue'
+import AccountsPage from '@/pages/accountsPage/AccountsPage.vue'
 
 const routes = [{ path: '/', component: AccountsPage }]
 const router = createRouter({
