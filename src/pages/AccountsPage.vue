@@ -1,5 +1,5 @@
 <template>
-  <Button>+</Button>
+  <Button type="button" severity="contrast" icon="pi pi-plus-circle" />
 </template>
 
 <script setup lang="ts">

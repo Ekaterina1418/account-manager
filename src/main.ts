@@ -1,4 +1,5 @@
 import './assets/main.css'
+import 'primeicons/primeicons.css'
 import PrimeVue from 'primevue/config'
 import PrimeVueConfig from '@/app/plugins/PrimeVue'
 import { createApp } from 'vue'
