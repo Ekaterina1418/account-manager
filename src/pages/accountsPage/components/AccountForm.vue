@@ -28,11 +28,12 @@
         v-model="model!.password"
       />
     </div>
+    <Button type="button" severity="contrast" icon="pi pi-trash" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { Select, InputText, Password } from 'primevue'
+import { Select, InputText, Password, Button } from 'primevue'
 import { typeOptions } from '../utils'
 
 const model = defineModel<{
@@ -45,12 +46,16 @@ const model = defineModel<{
 <style scoped>
 .account-form {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 16px;
 }
 .field {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 1rem;
+}
+.account-form .p-button {
+  align-self: flex-end;
+  height: 2.5rem;
 }
 </style>
