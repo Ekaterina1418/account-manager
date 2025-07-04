@@ -2,13 +2,13 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { useToast } from 'primevue/usetoast'
 import type { IAccount } from '../accountsPage/types'
-import { apiBase } from '../accountsPage/utils/index'
+import { apiBase, emptyForm } from '../accountsPage/utils/index'
 import { apiRequest } from '@/app/api/baseApi'
 
 export const useAccountsStore = defineStore('accounts', () => {
   const accounts = ref<IAccount[]>([])
   const error = ref<string | null>(null)
-const toast = useToast()
+  const toast = useToast()
 
   const fetchAccounts = async () => {
     error.value = null
@@ -26,26 +26,23 @@ const toast = useToast()
   const saveAccountToServer = async (account: IAccount) => {
     error.value = null
     try {
-      await fetchAccounts()
-      const exists = accounts.value.some((acc) => acc.id === account.id)
-      if (exists) {
+      if (account.isNew) {
+        await apiRequest({
+          url: `${apiBase}/accounts`,
+          method: 'POST',
+          data: { ...account, isNew: undefined },
+          headers: { 'Content-Type': 'application/json' },
+        })
+        toast.add({ severity: 'info', summary: 'Аккаунт сохранён', life: 3000 })
+      } else {
         await apiRequest({
           url: `${apiBase}/accounts/${account.id}`,
           method: 'PUT',
           data: account,
           headers: { 'Content-Type': 'application/json' },
         })
-        toast.add({ severity: 'info', summary: 'Аккаунт обновлён', life: 55000})
-      } else {
-        await apiRequest({
-          url: `${apiBase}/accounts`,
-          method: 'POST',
-          data: account,
-          headers: { 'Content-Type': 'application/json' },
-        })
-          toast.add({ severity: 'info', summary: 'Аккаунт сохранён', life: 3000 })
+        toast.add({ severity: 'info', summary: 'Аккаунт обновлён', life: 3000 })
       }
-      await fetchAccounts()
     } catch (err) {
       error.value = 'Ошибка сохранения аккаунта'
     }
@@ -66,20 +63,16 @@ const toast = useToast()
   }
 
   const addEmtyAccount = () => {
-    const newAccount: IAccount = {
+    accounts.value.push({
+      ...emptyForm,
       id: crypto.randomUUID(),
-      label: [],
-      type: '',
-      login: '',
-      password: null,
-    }
-    accounts.value.push(newAccount)
+      isNew: true,
+    })
   }
 
   const updateAccount = (account: IAccount) => {
     const idx = accounts.value.findIndex((a) => a.id === account.id)
-    if (idx >= 0) accounts.value[idx] = { ...account }
-    else accounts.value.push({ ...account })
+    if (idx >= 0) accounts.value[idx] = { ...account, isNew: false }
   }
   return {
     accounts,
