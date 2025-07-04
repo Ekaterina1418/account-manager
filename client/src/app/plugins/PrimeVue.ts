@@ -1,3 +1,4 @@
+import { toast } from '@/shared/ui/components/toast/override'
 import { definePreset } from '@primevue/themes'
 import Aura from '@primevue/themes/aura'
 
@@ -24,6 +25,9 @@ const CustomPreset = definePreset(Aura, {
         secondary: '#6B7280',
       },
     },
+    components: {
+      toast
+    }
   },
 })
 const PrimeVueConfig = {
