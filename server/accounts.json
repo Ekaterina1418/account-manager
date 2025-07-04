@@ -8,28 +8,15 @@
     ],
     "type": "local",
     "login": "admin1",
-    "password": "FA123GH$!"
+    "password": "ааааааа",
+    "isNew": false
   },
   {
-    "label": [
-      {
-        "text": "ttttt:ff"
-      }
-    ],
+    "label": [],
     "type": "local",
-    "login": "ffff",
-    "password": "qqqqqqqqqqqqqqqqq",
-    "id": "ffaf76b4-b777-4281-9948-a2a5c67c34d1"
-  },
-  {
-    "id": "77358120-cf6d-47cb-b215-798af252150e",
-    "label": [
-      {
-        "text": "аааdf"
-      }
-    ],
-    "type": "local",
-    "login": "аааа",
-    "password": "аааааааааааааааа"
+    "login": "gggg",
+    "password": "gggggggg",
+    "id": "de356d67-6d63-4577-a6fe-33e9df5fcd9d",
+    "isNew": false
   }
 ]
