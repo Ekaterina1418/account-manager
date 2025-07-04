@@ -1,0 +1,35 @@
+[
+  {
+    "id": "adf9f610-42b9-4348-9521-e70fccac178d",
+    "label": [
+      {
+        "text": "Основной"
+      }
+    ],
+    "type": "local",
+    "login": "admin1",
+    "password": "FA123GH$!"
+  },
+  {
+    "label": [
+      {
+        "text": "ttttt:ff"
+      }
+    ],
+    "type": "local",
+    "login": "ffff",
+    "password": "qqqqqqqqqqqqqqqqq",
+    "id": "ffaf76b4-b777-4281-9948-a2a5c67c34d1"
+  },
+  {
+    "id": "77358120-cf6d-47cb-b215-798af252150e",
+    "label": [
+      {
+        "text": "аааdf"
+      }
+    ],
+    "type": "local",
+    "login": "аааа",
+    "password": "аааааааааааааааа"
+  }
+]
