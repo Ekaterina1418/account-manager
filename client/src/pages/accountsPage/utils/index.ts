@@ -7,8 +7,8 @@ export const typeOptions = [
   { label: 'Локальная', value: 'local' },
 ]
 export const emptyForm: Omit<IAccountForm, 'id'> = {
-  label: '',
-  type: '',
+  label: [],
+  type: 'local',
   login: '',
   password: '',
 }
