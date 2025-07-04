@@ -1,4 +1,14 @@
+import type { IAccountForm } from '../types'
+
+export const apiBase = 'http://localhost:3000'
+
 export const typeOptions = [
   { label: 'LDAP', value: 'ldap' },
   { label: 'Локальная', value: 'local' },
 ]
+export const emptyForm: Omit<IAccountForm, 'id'> = {
+  label: '',
+  type: '',
+  login: '',
+  password: '',
+}
