@@ -1,15 +1,12 @@
-export interface IAccountForm {
-  id: string
-  label: string
-  type: string
-  login: string
-  password: string | null
+export interface ILabel {
+  text: string
 }
-
 export interface IAccount {
   id: string
-  label: { text: string }[]
+  label: ILabel[]
   type: string
   login: string
   password: string | null
+  isNew?: boolean
 }
+export type IAccountForm = Omit<IAccount, 'id'>
