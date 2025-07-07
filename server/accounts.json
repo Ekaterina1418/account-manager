@@ -1,22 +1,13 @@
 [
   {
-    "id": "adf9f610-42b9-4348-9521-e70fccac178d",
     "label": [
       {
-        "text": "Основной"
+        "text": "ппппппппппппппп"
       }
     ],
-    "type": "local",
-    "login": "admin1",
-    "password": "ааааааа",
-    "isNew": false
-  },
-  {
-    "label": [],
-    "type": "local",
-    "login": "gggg",
-    "password": "gggggggg",
-    "id": "de356d67-6d63-4577-a6fe-33e9df5fcd9d",
-    "isNew": false
+    "type": "ldap",
+    "login": "пппппппппппппппппп",
+    "password": null,
+    "id": "a4e35bc7-4c97-4ac4-8001-c3107dab8329"
   }
 ]
