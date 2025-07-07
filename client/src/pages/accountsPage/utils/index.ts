@@ -1,6 +1,7 @@
 import type { IAccountForm } from '../types'
 
-export const apiBase = 'http://localhost:3000'
+export const apiBase = import.meta.env.VITE_API_URL;
+
 
 export const typeOptions = [
   { label: 'LDAP', value: 'ldap' },
