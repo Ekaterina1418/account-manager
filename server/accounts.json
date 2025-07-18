@@ -1,13 +1,9 @@
 [
   {
-    "label": [
-      {
-        "text": "ппппппппппппппп"
-      }
-    ],
-    "type": "ldap",
-    "login": "пппппппппппппппппп",
-    "password": null,
-    "id": "a4e35bc7-4c97-4ac4-8001-c3107dab8329"
+    "label": [],
+    "type": "local",
+    "login": "Testtov@proton.me",
+    "password": "Admin789",
+    "id": "12c3a599-eaa3-4c37-95c8-33db22e4f541"
   }
 ]
